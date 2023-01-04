@@ -1,0 +1,24 @@
+.header {
+  background-color: #133A3B;
+  padding: 10px;
+}
+
+.header-button {
+  background-color: #133A3B;
+  border: 1px solid white;
+  margin-right: 10px;
+}
+
+.header-button:hover {
+  background-color: white;
+  border: 1px solid #133A3B;
+  color: #133A3B;
+}
+
+.header-title {
+  color: white;
+  font-family: cursive;
+  font-size: 1.8em;
+  float: right;
+  margin-right: 10px;
+}
