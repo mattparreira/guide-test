@@ -6,6 +6,8 @@ import { AppComponent } from './app.component';
 import {ButtonModule} from 'primeng/button';
 import {HeaderComponent} from './header/header.component';
 import {FooterComponent} from './footer/footer.component';
+import {FinanceService} from './services/finance.service';
+import {HttpClientModule} from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -16,9 +18,12 @@ import {FooterComponent} from './footer/footer.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    ButtonModule
+    ButtonModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [
+    FinanceService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
