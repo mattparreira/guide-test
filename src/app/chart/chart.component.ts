@@ -30,9 +30,15 @@ export class ChartComponent implements OnInit {
     let countDay = 1;
     for (let i = 30; i >= 1; i--) {
       const label = countDay + '°';
-      const value = data.chart.result[0].indicators.quote[0].open[
+      let value = data.chart.result[0].indicators.quote[0].open[
       data.chart.result[0].indicators.quote[0].open.length - i
-        ].toFixed(3);
+        ];
+
+      if (value == null) {
+        value = 0
+      }
+
+      value = value.toFixed(2)
 
       labels.push(label)
       values.push(value)
