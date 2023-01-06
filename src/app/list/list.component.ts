@@ -29,9 +29,15 @@ export class ListComponent implements OnInit{
     let id = 1;
     for (let i = 30; i >= 1; i--) {
       const date = new Date(data.chart.result[0].timestamp[data.chart.result[0].timestamp.length - i]);
-      const value = data.chart.result[0].indicators.quote[0].open[
+      let value = data.chart.result[0].indicators.quote[0].open[
       data.chart.result[0].indicators.quote[0].open.length - i
-        ].toFixed(2);
+        ];
+
+      if (value == null) {
+        value = 0
+      }
+
+      value = value.toFixed(2)
 
       let firstDateVariation = 0;
       if (i < 30) {
