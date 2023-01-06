@@ -11,13 +11,16 @@ import {HttpClientModule} from '@angular/common/http';
 import {ListComponent} from './list/list.component';
 import {TableModule} from 'primeng/table';
 import {InputTextModule} from 'primeng/inputtext';
+import {ChartComponent} from './chart/chart.component';
+import {ChartModule} from 'primeng/chart';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     FooterComponent,
-    ListComponent
+    ListComponent,
+    ChartComponent
   ],
   imports: [
     BrowserModule,
@@ -25,7 +28,8 @@ import {InputTextModule} from 'primeng/inputtext';
     HttpClientModule,
     ButtonModule,
     TableModule,
-    InputTextModule
+    InputTextModule,
+    ChartModule
   ],
   providers: [
     FinanceService
