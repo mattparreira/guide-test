@@ -1,0 +1,18 @@
+<section class="header">
+  <div class="row">
+    <div class="col-sm-12">
+      <ng-container *ngFor="let button of buttons">
+        <button pButton
+                [label]="button.label"
+                [icon]="button.icon"
+                (click)="navigate(button.route)"
+                type="button"
+                iconPos="left"
+                class="p-button-sm header-button">
+        </button>
+      </ng-container>
+      <span class="header-title">{{title}}</span>
+    </div>
+  </div>
+</section>
+
