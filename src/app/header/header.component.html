@@ -5,6 +5,7 @@
         <button pButton
                 [label]="button.label"
                 [icon]="button.icon"
+                (click)="navigate(button.route)"
                 type="button"
                 iconPos="left"
                 class="p-button-sm header-button">
